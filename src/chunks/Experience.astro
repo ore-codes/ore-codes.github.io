@@ -5,6 +5,7 @@ import upwork from '@/icons/upwork.svg';
 import trivox from '@/icons/trivox.svg';
 import hackerrank from '@/icons/hackerrank.svg';
 import emmersion from '@/icons/emmersion.svg';
+import { buttonVariants } from '../components/ui/Button';
 import Certificate from './experience/Certificate.astro';
 import ExperienceItem from './experience/ExperienceItem.astro';
 
@@ -60,19 +61,28 @@ const certificates = [
   class="grid border-y border-neutral-100 lg:place-items-center"
 >
   <div
-    class="flex flex-col gap-8 bg-neutral-100 px-6 py-24 md:flex-row lg:gap-32 lg:px-24"
+    class="flex flex-col gap-x-8 bg-neutral-100 px-6 py-24 md:flex-row md:flex-wrap lg:gap-x-32 lg:px-24"
   >
-    <div class="lg:w-[36rem]">
+    <div class="md:basis-1/2">
       <h2 class="text-2xl font-semibold">Working Experience</h2>
       <div class="py-8">
         {experiences.map((exp) => <ExperienceItem {...exp} />)}
       </div>
     </div>
-    <div class="lg:w-[36rem]">
+    <div class="md:flex-1">
       <h2 class="text-2xl font-semibold">Certificates</h2>
       <div class="py-8">
         {certificates.map((cert) => <Certificate {...cert} />)}
       </div>
+    </div>
+    <div class="basis-full text-center">
+      <a
+        href="https://drive.google.com/drive/folders/1MaUT8dM9xsGHTTv5EVJ745qTjP9iMaHa?usp=drive_link"
+        target="_blank"
+        class={buttonVariants()}
+      >
+        My up-to-date resume
+      </a>
     </div>
   </div>
 </section>

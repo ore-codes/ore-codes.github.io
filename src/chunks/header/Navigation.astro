@@ -25,12 +25,18 @@ import logo from '@/images/logo.svg';
       <div class="text-neutral-400">Nigeria</div>
       <NigerianTime client:load />
     </div>
-    <a
-      href={linkedIn}
-      class={clsx(buttonVariants(), 'hidden lg:inline-flex')}
-      target="_blank"
-      >Talk with me
-    </a>
+    <div class="hidden lg:contents">
+      <a href={linkedIn} class={buttonVariants()} target="_blank">
+        Talk with me
+      </a>
+      <a
+        href="https://drive.google.com/drive/folders/1MaUT8dM9xsGHTTv5EVJ745qTjP9iMaHa?usp=drive_link"
+        target="_blank"
+        class={buttonVariants({ variant: 'outline' })}
+      >
+        My up-to-date resume
+      </a>
+    </div>
   </div>
   <NavMenu client:idle />
 </nav>
