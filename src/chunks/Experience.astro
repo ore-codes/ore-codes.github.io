@@ -57,18 +57,22 @@ const certificates = [
 
 <section
   id="experience"
-  class="flex flex-col gap-8 bg-neutral-100 px-6 py-24 lg:flex-row lg:gap-32 lg:px-24"
+  class="grid min-h-screen place-items-center border-y border-neutral-100"
 >
-  <div class="lg:w-[36rem]">
-    <h2 class="text-2xl font-semibold">Working Experience</h2>
-    <div class="py-8">
-      {experiences.map((exp) => <ExperienceItem {...exp} />)}
+  <div
+    class="flex flex-col gap-8 bg-neutral-100 px-6 py-24 lg:flex-row lg:gap-32 lg:px-24"
+  >
+    <div class="lg:w-[36rem]">
+      <h2 class="text-2xl font-semibold">Working Experience</h2>
+      <div class="py-8">
+        {experiences.map((exp) => <ExperienceItem {...exp} />)}
+      </div>
     </div>
-  </div>
-  <div class="lg:w-[36rem]">
-    <h2 class="text-2xl font-semibold">Certificates</h2>
-    <div class="py-8">
-      {certificates.map((cert) => <Certificate {...cert} />)}
+    <div class="lg:w-[36rem]">
+      <h2 class="text-2xl font-semibold">Certificates</h2>
+      <div class="py-8">
+        {certificates.map((cert) => <Certificate {...cert} />)}
+      </div>
     </div>
   </div>
 </section>

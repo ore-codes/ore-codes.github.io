@@ -36,6 +36,16 @@ export const selectedProjects: SelectedProject[] = [
 
 export const demoProjects: DemoProject[] = [
   {
+    link: 'https://orekeepnotes.vercel.app/',
+    title: 'Keep Notes',
+    industry: 'Apollo GraphQL, Mongoose, Next.js',
+    year: 2024,
+    github: 'https://github.com/keep-notes/webapp',
+    description:
+      'A notekeeping app powered by Apollo, Mongoose, and Next.js. With' +
+      ' Apollo for data fetching, Mongoose for database management, and Next.js for fast performance, our app offers a seamless experience for organizing and accessing notes',
+  },
+  {
     link: 'https://form-ninja.vercel.app',
     title: 'Form Ninja',
     industry: 'Next.js, Supabase',
