@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import avatar from '@/images/avatar.png';
+import avatar from '@/images/avatar-transparent.png';
 import { linkedIn } from '@/constants/links';
 import SocialLink from '@/components/SocialLink.astro';
 import { github, twitter } from '@/constants/links';
@@ -9,29 +9,25 @@ import { Github, Linkedin, Twitter } from 'lucide-react';
 ---
 
 <section
-  class="my-6 flex flex-1 flex-col gap-8 lg:mx-24 lg:my-auto lg:max-h-[24rem] lg:flex-row"
+  class="flex flex-1 flex-col items-center justify-center gap-8 lg:mx-24 lg:flex-row lg:justify-between"
 >
-  <div class="mx-6 flex flex-col gap-8 lg:mx-0 lg:basis-1/2 lg:gap-16">
-    <Image
-      src={avatar}
-      class="h-16 w-16 rounded-full border-double lg:h-32 lg:w-32 lg:border-[12px]"
-      alt="Ore's picture"
-    />
-    <h1 class="flex flex-col text-3xl font-semibold md:text-5xl lg:gap-8">
-      <span>Hello!</span>
-      <span>I'm <span class="font-bold">Ore Adeleye</span></span>
+  <div
+    class="flex flex-col justify-center gap-12 pt-12 lg:basis-[30rem] lg:items-stretch lg:pt-0"
+  >
+    <h1 class="text-3xl md:text-5xl">
+      Meet{' '}<strong class="font-black">Ore Adeleye.</strong>
     </h1>
-  </div>
-  <div class="flex flex-1 flex-col gap-16">
-    <div class="mx-6 flex flex-col gap-2 lg:mx-0 lg:gap-8">
-      <h2 class="text-2xl font-semibold md:text-4xl">Architect of the Web</h2>
+    <div class="flex flex-col gap-2 lg:mx-0 lg:gap-4">
+      <h2 class="text-2xl font-semibold italic md:text-4xl">
+        Architect of the Web
+      </h2>
       <div class="text-neutral-500 md:text-2xl">
         Bridging gaps and building bridges<br />
         across the full tech stack
       </div>
     </div>
     <div
-      class="flex flex-1 items-end justify-center gap-8 pb-[20%] lg:flex-grow-0 lg:justify-start lg:pb-6"
+      class="flex items-end justify-center gap-8 lg:flex-1 lg:flex-grow-0 lg:justify-start lg:pb-6"
     >
       <a href="/#projects" class={buttonVariants({ size: 'lg' })}>
         See my works
@@ -45,7 +41,12 @@ import { Github, Linkedin, Twitter } from 'lucide-react';
       </a>
     </div>
   </div>
-  <div class="absolute right-8 flex flex-col gap-4">
+  <div
+    class="flex flex-1 flex-col items-start justify-center gap-16 lg:mr-32 lg:basis-1/2 lg:gap-32"
+  >
+    <Image src={avatar} class="size-fit" alt="Ore's picture" />
+  </div>
+  <div class="absolute right-8 top-48 flex flex-col gap-4 lg:top-auto">
     <SocialLink href={github} title="GitHub"><Github /></SocialLink>
     <SocialLink href={linkedIn} title="LinkedIn"><Linkedin /></SocialLink>
     <SocialLink href={twitter} title="Twitter"><Twitter /></SocialLink>

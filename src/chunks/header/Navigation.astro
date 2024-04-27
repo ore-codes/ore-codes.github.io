@@ -9,7 +9,9 @@ import { buttonVariants } from '@/components/ui/Button';
 import logo from '@/images/logo.svg';
 ---
 
-<nav class="mx-6 my-8 flex items-center justify-between lg:mx-24">
+<nav
+  class="fixed left-0 top-0 z-40 flex h-36 w-full items-center justify-between bg-[#fff] px-6 py-8 lg:px-24"
+>
   <div class="flex items-center gap-16">
     <Image src={logo} height={75} alt="Logo" />
     <ul class="hidden gap-8 lg:flex">

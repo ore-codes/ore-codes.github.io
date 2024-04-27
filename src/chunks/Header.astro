@@ -3,7 +3,11 @@ import Banner from './header/Banner.astro';
 import Navigation from './header/Navigation.astro';
 ---
 
-<header class="flex flex-col lg:min-h-screen">
+<header class="flex flex-col pt-40 lg:min-h-screen">
+  <div
+    class="fixed left-0 top-36 h-20 w-full bg-gradient-to-b from-[#eeec] to-[#eee0]"
+  >
+  </div>
   <Navigation />
   <Banner />
 </header>
