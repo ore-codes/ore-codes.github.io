@@ -36,6 +36,15 @@ export const selectedProjects: SelectedProject[] = [
 
 export const demoProjects: DemoProject[] = [
   {
+    link: 'https://jotjive.vercel.app/',
+    title: 'JotJive',
+    industry: 'Next.js, Sanity',
+    year: 2024,
+    github: 'https://github.com/ore-codes/jotjive',
+    description:
+      'My demo blog, built with Next.js and Sanity, showcases efficient server-side rendering and flexible content management. Using Storybook for component documentation and Chromatic for testing ensures a smooth user experience. This project highlights the potential of Next.js and Sanity for dynamic web applications.',
+  },
+  {
     link: 'https://orekeepnotes.vercel.app/',
     title: 'Keep Notes',
     industry: 'Apollo GraphQL, Mongoose, Next.js',
@@ -50,7 +59,7 @@ export const demoProjects: DemoProject[] = [
     title: 'Form Ninja',
     industry: 'Next.js, Supabase',
     year: 2024,
-    github: 'https://github.com/Quodline/form-ninja',
+    github: 'https://github.com/ore-codes/form-ninja',
     description:
       'Utilizing Next.js, this form builder app offers seamless' +
       ' integration, supported by comprehensive technical documentation through Storybook and rigorous testing with React Testing Library, ensuring robust functionality and user-friendly customization.',
@@ -59,18 +68,18 @@ export const demoProjects: DemoProject[] = [
     title: 'Lexical Analyser',
     industry: 'TypeScript, Node.js',
     year: 2024,
-    github: 'https://github.com/Quodline/c-lexical-scanner',
+    github: 'https://github.com/ore-codes/c-lexical-scanner',
     description:
       'Constructed with Node.js, this project serves as a simple lexical' +
       ' analyzer for C-style languages, by processing C source code to' +
       ' count lexemes while seamlessly converting them into token objects for comprehensive analysis.',
   },
   {
-    link: 'https://quodline.github.io',
+    link: 'https://ore-adeleye.vercel.app',
     title: 'Portfolio',
     industry: 'Next.js, Framer Motion',
     year: 2023,
-    github: 'https://github.com/Quodline/quodline.github.io',
+    github: 'https://github.com/ore-codes/quodline.github.io',
     description:
       'Constructed using Next.js, my personal website embodies simplicity and engagement through its captivating animations, providing visitors with an immersive and dynamic experience that enhances interaction and enjoyment.',
   },
@@ -79,7 +88,7 @@ export const demoProjects: DemoProject[] = [
     title: 'FinWallet',
     industry: 'Laravel, React, MySQL',
     year: 2022,
-    github: 'https://github.com/Quodline/finwallet',
+    github: 'https://github.com/ore-codes/finwallet',
     description:
       'Finance app with key features like send money, view transaction history, generate statements, and two factor authentication. It is designed with important fintech conventions in mind. Security and accessibility was prioritized in the development of this project.',
   },
@@ -88,7 +97,7 @@ export const demoProjects: DemoProject[] = [
     title: 'Quod Gist',
     industry: 'Laravel, Vue, Pusher, MySQL',
     year: 2021,
-    github: 'https://github.com/Quodline/quod-gist',
+    github: 'https://github.com/ore-codes/quod-gist',
     description:
       'Chat platform with key features like group chats, real time messaging, markdown support, code highlight, avatars and so on. Users can turn on two-factor authentication to protect their accounts.',
   },
@@ -97,7 +106,7 @@ export const demoProjects: DemoProject[] = [
     title: 'Card Maker',
     industry: 'Alpine.js, Web Canvas 2D',
     year: 2020,
-    github: 'https://github.com/Quodline/card-maker',
+    github: 'https://github.com/ore-codes/card-maker',
     description:
       'Crafted for the festive season of 2020, this web application boasts a graphical interface powered by Web Canvas and Alpine.js, enabling users to effortlessly design ornate square cards with flair and creativity.',
   },
@@ -106,7 +115,7 @@ export const demoProjects: DemoProject[] = [
     title: 'PHP Quiz',
     industry: 'Vue 2',
     year: 2020,
-    github: 'https://github.com/Quodline/php-quiz',
+    github: 'https://github.com/ore-codes/php-quiz',
     description:
       'Designed in Vue.js, this straightforward trivia app aims to captivate users with its engaging interface, providing a seamless and enjoyable experience while delivering entertaining PHP 7 quizzes.',
   },
@@ -115,7 +124,7 @@ export const demoProjects: DemoProject[] = [
     title: 'Number to Words',
     industry: 'JavaScript',
     year: 2019,
-    github: 'https://github.com/Quodline/number-to-words',
+    github: 'https://github.com/ore-codes/number-to-words',
     description:
       'Implemented with JavaScript, this website harnesses the power of a recursive algorithm to meticulously convert numeric values into their textual equivalents, offering users an efficient and precise method for translating numbers into words.',
   },
