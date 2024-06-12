@@ -10,6 +10,9 @@ interface Project {
 }
 
 type SelectedProject = Project & { thumb: ImageMetadata };
-type DemoProject = PartialBy<Project, 'link'> & { github: string };
+type DemoProject = PartialBy<Project, 'link'> & {
+  github: string;
+  storybook?: string;
+};
 
 export type { DemoProject, SelectedProject };

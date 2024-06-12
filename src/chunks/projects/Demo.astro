@@ -29,6 +29,15 @@ const project = Astro.props as DemoProject;
     project.github && (
       <CardFooter>
         <div class="flex flex-1 justify-end gap-4">
+          {project.storybook && (
+            <a
+              class={buttonVariants({ variant: 'secondary' })}
+              href={project.storybook}
+              target="_blank"
+            >
+              Storybook
+            </a>
+          )}
           <a
             class={buttonVariants({ variant: 'secondary' })}
             href={project.github}

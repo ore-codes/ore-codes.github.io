@@ -2,17 +2,17 @@ import type { DemoProject, SelectedProject } from './types.ts';
 import trivox from '@/images/projects/trivox.png';
 import cleangig from '@/images/projects/cleangig.png';
 import getLinked from '@/images/projects/get_linked.png';
+import dukia from '@/images/projects/dukia.png';
 
 export const selectedProjects: SelectedProject[] = [
   {
-    link: 'https://trivox.se',
-    thumb: trivox,
-    title: 'Trivox',
-    industry: 'Automobiles & Sales',
-    year: 2022,
+    link: 'https://dukia.io',
+    thumb: dukia,
+    title: 'Dukia',
+    industry: 'Web3, NFT',
+    year: 2024,
     description:
-      'An online marketplace for used vehicles with features like' +
-      ' payment integration, two factor authentication, automated chat system, advanced tracking system and more.',
+      'I am working on an innovative NFT marketplace website that transforms how digital assets are traded. With a user-friendly interface, it allows easy minting, listing, and discovery of unique NFTs, backed by secure blockchain technology.',
   },
   {
     link: 'https://cleangig.se',
@@ -32,6 +32,16 @@ export const selectedProjects: SelectedProject[] = [
     description:
       'I recently partook in a frontend challenge on Twitter sponsored by getlinked.ai. The challenge involved replicating a Figma design to be pixel perfect and adding a touch of creativity. I also integrated a REST API for user registration.',
   },
+  {
+    link: 'https://trivox.se',
+    thumb: trivox,
+    title: 'Trivox',
+    industry: 'Automobiles & Sales',
+    year: 2022,
+    description:
+      'An online marketplace for used vehicles with features like' +
+      ' payment integration, two factor authentication, automated chat system, advanced tracking system and more.',
+  },
 ];
 
 export const demoProjects: DemoProject[] = [
@@ -41,6 +51,7 @@ export const demoProjects: DemoProject[] = [
     industry: 'Next.js, Sanity',
     year: 2024,
     github: 'https://github.com/ore-codes/jotjive',
+    storybook: 'https://663b68a4a7a0f8bbc9af2742-nqcquptmdp.chromatic.com',
     description:
       'My demo blog, built with Next.js and Sanity, showcases efficient server-side rendering and flexible content management. Using Storybook for component documentation and Chromatic for testing ensures a smooth user experience. This project highlights the potential of Next.js and Sanity for dynamic web applications.',
   },
@@ -50,6 +61,7 @@ export const demoProjects: DemoProject[] = [
     industry: 'Apollo GraphQL, Mongoose, Next.js',
     year: 2024,
     github: 'https://github.com/keep-notes/webapp',
+    storybook: 'https://6638c9dc544733791c695a8b-ichckwgoad.chromatic.com/',
     description:
       'A notekeeping app powered by Apollo, Mongoose, and Next.js. With' +
       ' Apollo for data fetching, Mongoose for database management, and Next.js for fast performance, our app offers a seamless experience for organizing and accessing notes',
@@ -60,6 +72,7 @@ export const demoProjects: DemoProject[] = [
     industry: 'Next.js, Supabase',
     year: 2024,
     github: 'https://github.com/ore-codes/form-ninja',
+    storybook: 'https://663b6cffe28cc0123aa2f5f5-czhtabnkjq.chromatic.com',
     description:
       'Utilizing Next.js, this form builder app offers seamless' +
       ' integration, supported by comprehensive technical documentation through Storybook and rigorous testing with React Testing Library, ensuring robust functionality and user-friendly customization.',
