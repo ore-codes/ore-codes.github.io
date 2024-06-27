@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import { clsx } from 'clsx';
 import { linkedIn } from '@/constants/links';
+import { cn } from '../../lib/utils';
 import NavMenu from './navigation/NavMenu';
 import NigerianTime from './navigation/NigerianTime';
 import NavLink from './navigation/NavLink.astro';
@@ -9,34 +10,36 @@ import { buttonVariants } from '@/components/ui/Button';
 import logo from '@/images/logo.svg';
 ---
 
-<nav
-  class="fixed left-0 top-0 z-40 flex h-24 w-full items-center justify-between bg-[#fff] px-6 py-8 lg:h-36 lg:px-24"
->
-  <div class="flex items-center gap-16">
-    <Image src={logo} height={75} alt="Logo" />
-    <ul class="hidden gap-8 lg:flex">
-      <NavLink href="/#experience">Experience</NavLink>
-      <NavLink href="/#projects">Projects</NavLink>
-      <NavLink href="/#footer">Contact</NavLink>
-    </ul>
-  </div>
-  <div class="flex items-center gap-8 xl:gap-16">
-    <div class="font-bold">
-      <div class="text-neutral-400">Nigeria</div>
-      <NigerianTime client:load />
+<div class="fixed left-0 top-0 z-50 h-24 w-full bg-white py-4 lg:px-24">
+  <nav
+    class="mx-auto flex max-w-[1440px] items-center justify-between px-4 lg:px-0"
+  >
+    <div class="flex items-center gap-16">
+      <Image src={logo} height={75} alt="Logo" />
+      <ul class="hidden gap-8 lg:flex">
+        <NavLink href="/#experience">Experience</NavLink>
+        <NavLink href="/#projects">Projects</NavLink>
+        <NavLink href="/#footer">Contact</NavLink>
+      </ul>
     </div>
-    <div class="hidden lg:contents">
-      <a href={linkedIn} class={buttonVariants()} target="_blank">
-        Talk with me
-      </a>
-      <a
-        href="https://drive.google.com/drive/folders/1MaUT8dM9xsGHTTv5EVJ745qTjP9iMaHa?usp=drive_link"
-        target="_blank"
-        class={buttonVariants({ variant: 'outline' })}
-      >
-        My up-to-date resume
-      </a>
+    <div class="flex items-center gap-8 xl:gap-16">
+      <div class="font-bold">
+        <div class="text-neutral-400">Nigeria</div>
+        <NigerianTime client:load />
+      </div>
+      <div class="hidden lg:contents">
+        <a href={linkedIn} class={buttonVariants()} target="_blank">
+          Talk with me
+        </a>
+        <a
+          href="https://drive.google.com/drive/folders/1MaUT8dM9xsGHTTv5EVJ745qTjP9iMaHa?usp=drive_link"
+          target="_blank"
+          class={buttonVariants({ variant: 'outline' })}
+        >
+          My up-to-date resume
+        </a>
+      </div>
     </div>
-  </div>
-  <NavMenu client:idle />
-</nav>
+    <NavMenu client:idle />
+  </nav>
+</div>

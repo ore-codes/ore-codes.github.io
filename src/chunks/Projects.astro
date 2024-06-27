@@ -4,17 +4,13 @@ import Demo from './projects/Demo.astro';
 import Project from './projects/Project.astro';
 ---
 
-<section id="projects" class="flex flex-col gap-16 px-6 py-24 lg:px-24">
-  <div>
-    <h2 class="text-2xl font-semibold">Selected Projects</h2>
-    <div class="grid gap-8 py-8 lg:grid-cols-2">
-      {selectedProjects.map((project) => <Project {...project} />)}
-    </div>
+<section id="projects" class="flex flex-col gap-16 py-24">
+  <h2 class="text-2xl font-semibold">Selected Projects</h2>
+  <div class="grid gap-8 px-6 py-8 lg:grid-cols-2 lg:px-24">
+    {selectedProjects.map((project) => <Project {...project} />)}
   </div>
-  <div>
-    <h2 class="text-2xl font-semibold">Demos (Proofs of Concept)</h2>
-    <div class="grid gap-8 py-8 lg:grid-cols-3">
-      {demoProjects.map((project) => <Demo {...project} />)}
-    </div>
+  <h2 class="text-2xl font-semibold">Demos (Proofs of Concept)</h2>
+  <div class="grid gap-8 px-6 py-8 lg:grid-cols-3 lg:px-24">
+    {demoProjects.map((project) => <Demo {...project} />)}
   </div>
 </section>

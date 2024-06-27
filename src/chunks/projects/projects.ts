@@ -77,7 +77,7 @@ export const demoProjects: DemoProject[] = [
       'Utilizing Next.js, this form builder app offers seamless' +
       ' integration, supported by comprehensive technical documentation through Storybook and rigorous testing with React Testing Library, ensuring robust functionality and user-friendly customization.',
   },
-  {
+  /*{
     title: 'Lexical Analyser',
     industry: 'TypeScript, Node.js',
     year: 2024,
@@ -86,7 +86,7 @@ export const demoProjects: DemoProject[] = [
       'Constructed with Node.js, this project serves as a simple lexical' +
       ' analyzer for C-style languages, by processing C source code to' +
       ' count lexemes while seamlessly converting them into token objects for comprehensive analysis.',
-  },
+  },*/
   {
     link: 'https://ore-adeleye.vercel.app',
     title: 'Portfolio',

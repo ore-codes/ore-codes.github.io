@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets';
+import varens from '@/images/varens.png';
 import amazin from '@/icons/amazin.svg';
 import upwork from '@/icons/upwork.svg';
 import trivox from '@/icons/trivox.svg';
@@ -11,11 +12,18 @@ import ExperienceItem from './experience/ExperienceItem.astro';
 
 const experiences = [
   {
+    logo: varens,
+    position: 'Mobile App Developer',
+    company: 'Varens',
+    start: 'April 2024',
+    end: 'Present',
+  },
+  {
     logo: amazin,
     position: 'Senior Frontend Developer',
     company: 'Amazin Trips',
     start: 'November 2023',
-    end: 'Present',
+    end: 'June 2024',
   },
   {
     logo: trivox,
@@ -48,7 +56,13 @@ const certificates = [
     logo: hackerrank,
   },
   {
-    link: 'https://www.hackerrank.com/certificates/90fb18ee0998',
+    link: 'https://www.hackerrank.com/certificates/a26331cc0363',
+    title: 'JavaScript',
+    provider: 'HackerRank',
+    logo: hackerrank,
+  },
+  {
+    link: 'https://www.hackerrank.com/certificates/c00bf27ce197',
     title: 'React',
     provider: 'HackerRank',
     logo: hackerrank,

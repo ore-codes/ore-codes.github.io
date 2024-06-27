@@ -74,6 +74,6 @@
     @apply bg-background text-foreground;
   }
   a {
-    @apply hover:opacity-75;
+    @apply hover:scale-105 transition-all;
   }
 }

@@ -12,7 +12,11 @@ import {
 const { link, thumb, title, industry, year, description } = Astro.props;
 ---
 
-<a href={link} target="_blank" class="flex rounded-lg hover:shadow-2xl">
+<a
+  href={link}
+  target="_blank"
+  class="flex rounded-lg grayscale transition-all hover:opacity-100 hover:shadow-2xl hover:grayscale-0"
+>
   <Card>
     <CardHeader>
       <Image
