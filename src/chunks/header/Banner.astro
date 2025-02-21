@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import avatar from '@/images/avatar-transparent.png';
+import illustration from '@/images/banner-img.svg';
 import { linkedIn } from '@/constants/links';
 import SocialLink from '@/components/SocialLink.astro';
 import { github, twitter } from '@/constants/links';
@@ -40,9 +40,13 @@ import { Github, Linkedin, Twitter } from 'lucide-react';
     </div>
   </div>
   <div
-    class="flex flex-1 flex-col items-end justify-center gap-16 lg:basis-1/2 lg:gap-32"
+    class="flex flex-1 flex-col items-center justify-center gap-16 lg:basis-1/2 lg:gap-32"
   >
-    <Image src={avatar} class="size-fit lg:size-[512px]" alt="Ore's picture" />
+    <Image
+      src={illustration}
+      class="size-fit lg:size-[512px]"
+      alt="A developer writing code"
+    />
   </div>
   <div class="absolute right-8 top-48 flex flex-col gap-4 lg:top-auto">
     <SocialLink href={github} title="GitHub"><Github /></SocialLink>
