@@ -1,10 +1,19 @@
 import type { DemoProject, SelectedProject } from './types.ts';
 import trivox from '@/images/projects/trivox.png';
 import cleangig from '@/images/projects/cleangig.png';
-import getLinked from '@/images/projects/get_linked.png';
 import dukia from '@/images/projects/dukia.png';
+import stellar from '@/images/projects/stellar.png';
 
 export const selectedProjects: SelectedProject[] = [
+  {
+    link: 'https://stellar-conferencing.vercel.app',
+    thumb: stellar,
+    title: 'Stellar Conferencing',
+    industry: 'Communication',
+    year: 2025,
+    description:
+      'A seamless and reliable video conferencing platform designed for smooth online meetings, virtual collaboration, and real-time communication. It offers high-quality video and audio, ensuring clear conversations, whether for business meetings, remote work, or social interactions with an intuitive interface and efficient performance.',
+  },
   {
     link: 'https://dukia.io',
     thumb: dukia,
@@ -24,15 +33,6 @@ export const selectedProjects: SelectedProject[] = [
       'This app features user registration, service listings, booking and scheduling capabilities, secure payments, real-time tracking, reviews and ratings, notifications, customer support, and service provider management, streamlining the process of booking home services.',
   },
   {
-    link: 'https://get-lnked-contest.vercel.app/',
-    thumb: getLinked,
-    title: 'GetLinked AI hackathon',
-    industry: 'AI, Creativity',
-    year: 2023,
-    description:
-      'I recently partook in a frontend challenge on Twitter sponsored by getlinked.ai. The challenge involved replicating a Figma design to be pixel perfect and adding a touch of creativity. I also integrated a REST API for user registration.',
-  },
-  {
     link: 'https://trivox.se',
     thumb: trivox,
     title: 'Trivox',
@@ -46,6 +46,16 @@ export const selectedProjects: SelectedProject[] = [
 
 export const demoProjects: DemoProject[] = [
   {
+    link: 'https://typeshii-ruddy.vercel.app/',
+    title: 'TypeShii',
+    industry: 'React, RxJS, Socket.IO, Framer Motion',
+    year: 2025,
+    github: 'https://github.com/ore-codes/typeshii',
+    storybook: 'https://663b68a4a7a0f8bbc9af2742-nqcquptmdp.chromatic.com',
+    description:
+      'A fast-paced multiplayer typing racing game built with NestJS, React (Vite), Socket.IO, and Redis, managed in a Turborepo monorepo ',
+  },
+  {
     link: 'https://jotjive.vercel.app/',
     title: 'JotJive',
     industry: 'Next.js, Sanity',
@@ -55,7 +65,7 @@ export const demoProjects: DemoProject[] = [
     description:
       'My demo blog, built with Next.js and Sanity, showcases efficient server-side rendering and flexible content management. Using Storybook for component documentation and Chromatic for testing ensures a smooth user experience. This project highlights the potential of Next.js and Sanity for dynamic web applications.',
   },
-  {
+  /* {
     link: 'https://orekeepnotes.vercel.app/',
     title: 'Keep Notes',
     industry: 'Apollo GraphQL, Mongoose, Next.js',
@@ -65,8 +75,8 @@ export const demoProjects: DemoProject[] = [
     description:
       'A notekeeping app powered by Apollo, Mongoose, and Next.js. With' +
       ' Apollo for data fetching, Mongoose for database management, and Next.js for fast performance, our app offers a seamless experience for organizing and accessing notes',
-  },
-  {
+  },*/
+  /*{
     link: 'https://form-ninja.vercel.app',
     title: 'Form Ninja',
     industry: 'Next.js, Supabase',
@@ -76,17 +86,17 @@ export const demoProjects: DemoProject[] = [
     description:
       'Utilizing Next.js, this form builder app offers seamless' +
       ' integration, supported by comprehensive technical documentation through Storybook and rigorous testing with React Testing Library, ensuring robust functionality and user-friendly customization.',
-  },
-  /*{
-    title: 'Lexical Analyser',
-    industry: 'TypeScript, Node.js',
-    year: 2024,
-    github: 'https://github.com/ore-codes/c-lexical-scanner',
-    description:
-      'Constructed with Node.js, this project serves as a simple lexical' +
-      ' analyzer for C-style languages, by processing C source code to' +
-      ' count lexemes while seamlessly converting them into token objects for comprehensive analysis.',
   },*/
+  /*{
+          title: 'Lexical Analyser',
+          industry: 'TypeScript, Node.js',
+          year: 2024,
+          github: 'https://github.com/ore-codes/c-lexical-scanner',
+          description:
+            'Constructed with Node.js, this project serves as a simple lexical' +
+            ' analyzer for C-style languages, by processing C source code to' +
+            ' count lexemes while seamlessly converting them into token objects for comprehensive analysis.',
+        },*/
   {
     link: 'https://ore-adeleye.vercel.app',
     title: 'Portfolio',
@@ -95,6 +105,15 @@ export const demoProjects: DemoProject[] = [
     github: 'https://github.com/ore-codes/quodline.github.io',
     description:
       'Constructed using Next.js, my personal website embodies simplicity and engagement through its captivating animations, providing visitors with an immersive and dynamic experience that enhances interaction and enjoyment.',
+  },
+  {
+    link: 'https://get-lnked-contest.vercel.app/',
+    title: 'GetLinked AI hackathon',
+    industry: 'React, Tailwind',
+    year: 2023,
+    github: 'https://github.com/ore-codes/get_linked',
+    description:
+      'I recently partook in a frontend challenge on Twitter sponsored by getlinked.ai. The challenge involved replicating a Figma design to be pixel perfect and adding a touch of creativity. I also integrated a REST API for user registration.',
   },
   {
     link: 'https://drive.google.com/file/d/1rXQZnSn5oAIXlSi1BoESUv1vezRYTaOz/view?usp=sharing',

@@ -4,30 +4,62 @@ import '@fontsource-variable/manrope';
 
 <html lang="en">
   <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D9MFYH87C0"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D9MFYH87C0"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
 
-    gtag('config', 'G-D9MFYH87C0', {cookie_flags: 'SameSite=None;Secure'});
-  </script>
+      gtag('config', 'G-D9MFYH87C0', { cookie_flags: 'SameSite=None;Secure' });
+    </script>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <meta property="og:title" content="Ore Adeleye"/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://ore-codes.github.io"/>
-    <meta property="og:image" content="https://ore-codes.github.io/og-image.png"/>
-    <meta property="twitter:image" content="https://ore-codes.github.io/og-image.png" />
-    <meta property="og:site_name" content="Ore Adeleye"/>
-    <meta property="og:description" content="Ore Adeleye's personal website"/>
+    <meta property="og:title" content="Ore Adeleye" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ore-codes.github.io" />
+    <meta
+      property="og:image"
+      content="https://ore-codes.github.io/og-image.png"
+    />
+    <meta
+      property="twitter:image"
+      content="https://ore-codes.github.io/og-image.png"
+    />
+    <meta property="og:site_name" content="Ore Adeleye" />
+    <meta property="og:description" content="Ore Adeleye's personal website" />
     <title>Ore Adeleye</title>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-MC2DTL3V');
+    </script>
+    <!-- End Google Tag Manager -->
   </head>
   <body>
-    <div class="mx-auto max-w-[1440px]">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-MC2DTL3V"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe></noscript
+    >
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="mx-auto max-w-[1440px] px-4">
       <slot />
     </div>
   </body>
