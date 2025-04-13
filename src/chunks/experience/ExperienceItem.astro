@@ -5,13 +5,13 @@ const { logo, company, position, start, end, imgFilter } = Astro.props;
 ---
 
 <div class="flex items-center gap-4 border-b py-8 last:border-none">
-  <figure class="inline-grid h-12 w-12 place-items-center rounded-md bg-white">
+  <figure class="inline-grid h-12 w-12 place-items-center rounded-md">
     <Image src={logo} alt={`${company} logo`} class={clsx('h-8', imgFilter)} />
   </figure>
   <div>
-    <h3 class="font-semibold">
+    <h3 class="font-semibold text-white">
       {position} at <span class="font-bold">{company}</span>
     </h3>
-    <div class="text-neutral-500">{start} - {end}</div>
+    <div>{start} - {end}</div>
   </div>
 </div>

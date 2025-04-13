@@ -15,7 +15,7 @@ const { link, thumb, title, industry, year, description } = Astro.props;
 <a
   href={link}
   target="_blank"
-  class="flex rounded-lg grayscale transition-all hover:opacity-100 hover:shadow-2xl hover:grayscale-0"
+  class="flex rounded-lg transition-all hover:shadow-2xl"
 >
   <Card>
     <CardHeader>
@@ -25,8 +25,8 @@ const { link, thumb, title, industry, year, description } = Astro.props;
         class="mb-8 rounded border"
       />
       <CardTitle>{title}</CardTitle>
-      <CardDescription>{industry}</CardDescription>
-      <CardDescription className="font-semibold text-neutral-500">
+      <CardDescription className="text-white">{industry}</CardDescription>
+      <CardDescription className="font-semibold">
         {year}
       </CardDescription>
     </CardHeader>

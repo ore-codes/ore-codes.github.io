@@ -2,17 +2,17 @@ import type { DemoProject, SelectedProject } from './types.ts';
 import trivox from '@/images/projects/trivox.png';
 import cleangig from '@/images/projects/cleangig.png';
 import dukia from '@/images/projects/dukia.png';
-import stellar from '@/images/projects/stellar.png';
+import learnille from '@/images/projects/learnille-screens.png';
 
 export const selectedProjects: SelectedProject[] = [
   {
     link: 'https://stellar-conferencing.vercel.app',
-    thumb: stellar,
-    title: 'Stellar Conferencing',
-    industry: 'Communication',
-    year: 2025,
+    thumb: learnille,
+    title: 'Learnille',
+    industry: 'EdTech',
+    year: 2024,
     description:
-      'A seamless and reliable video conferencing platform designed for smooth online meetings, virtual collaboration, and real-time communication. It offers high-quality video and audio, ensuring clear conversations, whether for business meetings, remote work, or social interactions with an intuitive interface and efficient performance.',
+      'Built the mobile frontend for Learnille, a gamified LMS connecting students with tutors via chat, video calls, and interactive courses. Developed with React Native, focusing on performance, reusable components, and real-time features like messaging and streaming.',
   },
   {
     link: 'https://dukia.io',
@@ -113,7 +113,7 @@ export const demoProjects: DemoProject[] = [
     year: 2023,
     github: 'https://github.com/ore-codes/get_linked',
     description:
-      'I recently partook in a frontend challenge on Twitter sponsored by getlinked.ai. The challenge involved replicating a Figma design to be pixel perfect and adding a touch of creativity. I also integrated a REST API for user registration.',
+      'I partook in a frontend challenge on Twitter sponsored by getlinked.ai. The challenge involved replicating a Figma design to be pixel perfect and adding a touch of creativity. I also integrated a REST API for user registration.',
   },
   {
     link: 'https://drive.google.com/file/d/1rXQZnSn5oAIXlSi1BoESUv1vezRYTaOz/view?usp=sharing',

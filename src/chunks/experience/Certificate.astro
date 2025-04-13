@@ -8,11 +8,11 @@ const { link, title, provider, logo } = Astro.props;
   target="_blank"
   class="flex items-center gap-4 border-b py-8 last:border-none"
 >
-  <figure class="inline-grid h-12 w-12 place-items-center rounded-md bg-white">
+  <figure class="inline-grid h-12 w-12 place-items-center rounded-md">
     <Image src={logo} alt={`${provider} logo`} class="h-8" />
   </figure>
   <div>
-    <h3 class="font-semibold">{title}</h3>
-    <div class="text-neutral-500">{provider}</div>
+    <h3 class="font-semibold text-white">{title}</h3>
+    <div>{provider}</div>
   </div>
 </a>
