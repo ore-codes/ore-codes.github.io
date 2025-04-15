@@ -6,7 +6,7 @@ import learnille from '@/images/projects/learnille-screens.png';
 
 export const selectedProjects: SelectedProject[] = [
   {
-    link: 'https://stellar-conferencing.vercel.app',
+    link: 'https://www.learnille.com/',
     thumb: learnille,
     title: 'Learnille',
     industry: 'EdTech',
@@ -21,7 +21,7 @@ export const selectedProjects: SelectedProject[] = [
     industry: 'Web3, NFT',
     year: 2024,
     description:
-      'I am working on an innovative NFT marketplace website that transforms how digital assets are traded. With a user-friendly interface, it allows easy minting, listing, and discovery of unique NFTs, backed by secure blockchain technology.',
+      'An innovative NFT marketplace website that transforms how digital assets are traded. With a user-friendly interface, it allows easy minting, listing, and discovery of unique NFTs, backed by secure blockchain technology.',
   },
   {
     link: 'https://cleangig.se',
