@@ -29,7 +29,7 @@ export default function NavMenu() {
         <DropdownMenuSeparator />
         <div className="grid grid-cols-2 gap-4">
           <a
-            href="https://drive.google.com/drive/folders/1MaUT8dM9xsGHTTv5EVJ745qTjP9iMaHa?usp=drive_link"
+            href="https://rxresu.me/ore-codes/ore-adeleye-resume"
             target="_blank"
             className={buttonVariants({})}
           >
