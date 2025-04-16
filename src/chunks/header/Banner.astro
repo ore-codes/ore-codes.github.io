@@ -9,13 +9,13 @@ import { Github, Linkedin, Twitter } from 'lucide-react';
 ---
 
 <section
-  class="flex flex-1 flex-col items-center justify-center gap-8 lg:flex-row lg:justify-between"
+  class="relative flex flex-1 flex-col items-center justify-center gap-8 lg:static lg:flex-row lg:justify-between"
 >
   <div
     class="flex flex-col justify-center gap-12 pt-12 lg:basis-[50rem] lg:items-stretch lg:pt-0"
   >
     <h1 class="text-3xl font-medium md:text-7xl">
-      Meet{' '}<strong class="text-brand font-black">Ore Adeleye.</strong>
+      Meet{' '}<strong class="font-black text-brand">Ore Adeleye.</strong>
     </h1>
     <div class="flex flex-col gap-2 lg:mx-0 lg:gap-4">
       <h2 class="text-2xl font-semibold md:text-4xl">Architect of the Web</h2>
@@ -48,7 +48,7 @@ import { Github, Linkedin, Twitter } from 'lucide-react';
       alt="A developer writing code"
     />
   </div>
-  <div class="absolute right-8 top-48 flex flex-col gap-4 lg:top-auto">
+  <div class="absolute right-8 top-8 flex flex-col gap-4 lg:top-auto">
     <SocialLink href={github} title="GitHub"><Github /></SocialLink>
     <SocialLink href={linkedIn} title="LinkedIn"><Linkedin /></SocialLink>
     <SocialLink href={twitter} title="Twitter"><Twitter /></SocialLink>
