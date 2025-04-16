@@ -1,0 +1,71 @@
+---
+import logoAce from '@/images/clients/logo-ace.png';
+import logoAlvina from '@/images/clients/logo-alvina.png';
+import logoAmazin from '@/images/clients/logo-amazin.svg';
+import logoAndela from '@/images/clients/logo-andela.svg';
+import logoCleangig from '@/images/clients/logo-cleangig.png';
+import logoDalatek from '@/images/clients/logo-dalatek.png';
+import logoDukia from '@/images/clients/logo-dukiajpg.jpg';
+import logoHoodygang from '@/images/clients/logo-hoodygang.png';
+import logoLearnille from '@/images/clients/logo-learnille.png';
+import logoMtn from '@/images/clients/logo-mtn.svg';
+import logoObops from '@/images/clients/logo-obops.jpg';
+import logoOlyves from '@/images/clients/logo-olyves.svg';
+import logoPlayhour from '@/images/clients/logo-playhour.svg';
+import logoSchooltry from '@/images/clients/logo-schooltry.png';
+import logoShopurban from '@/images/clients/logo-shopurban.png';
+import logoTrivox from '@/images/clients/logo-trivox.svg';
+import logoVibrate from '@/images/clients/logo-vibrate.png';
+
+const clients = [
+  { name: 'Africa Centres of Excellence', logo: logoAce },
+  { name: 'Alvina Schools', logo: logoAlvina },
+  { name: 'Amazin Trips', logo: logoAmazin },
+  { name: 'Andela', logo: logoAndela },
+  { name: 'CleanGig', logo: logoCleangig },
+  { name: 'Dalatek', logo: logoDalatek },
+  { name: 'Dukia', logo: logoDukia },
+  { name: 'HoodyGang', logo: logoHoodygang },
+  { name: 'Learnille', logo: logoLearnille },
+  { name: 'MyMTN NG', logo: logoMtn },
+  { name: 'OBOPS', logo: logoObops },
+  { name: 'Olyves', logo: logoOlyves },
+  { name: 'PlayHour', logo: logoPlayhour },
+  { name: 'SchoolTry', logo: logoSchooltry },
+  { name: 'Shopurban', logo: logoShopurban },
+  { name: 'Trivox', logo: logoTrivox },
+  { name: 'Vibrate Warsaw', logo: logoVibrate },
+];
+---
+
+<div class="w-full snap-start py-24">
+  <div class="animate-marquee flex w-max space-x-16">
+    {
+      clients
+        .concat(clients)
+        .map((client, i) => (
+          <img
+            src={client.logo.src}
+            alt={client.name}
+            class="h-auto w-24 flex-shrink-0 object-contain"
+            loading="lazy"
+          />
+        ))
+    }
+  </div>
+</div>
+
+<style>
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+</style>
