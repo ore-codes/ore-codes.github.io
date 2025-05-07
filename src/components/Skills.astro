@@ -1,0 +1,251 @@
+---
+const skills = [
+  {
+    category: "Frontend Development",
+    description:
+      "Building world-class, performant, and accessible user interfaces across platforms.",
+    skills: [
+      {
+        name: "UI Engineering",
+        description:
+          "Pixel-perfect, responsive, and accessible web interfaces with modern tools.",
+        tools: [
+          "React",
+          "CSS Grid",
+          "Flexbox",
+          "WCAG",
+          "Tailwind CSS",
+          "Storybook",
+        ],
+      },
+      {
+        name: "Cross-Platform Development",
+        description:
+          "Delivering seamless experiences across web, mobile, and desktop.",
+        tools: ["React Native", "PWA", "Cordova", "Electron"],
+      },
+      {
+        name: "State Management",
+        description: "Robust state and data handling for complex applications.",
+        tools: [
+          "RxJS",
+          "Redux",
+          "Context API",
+          "Apollo Client",
+          "Tanstack Query",
+        ],
+      },
+      {
+        name: "Advanced Animations & UX",
+        description:
+          "Engaging users with smooth, delightful, and accessible experiences.",
+        tools: ["Framer Motion", "GSAP", "Lottie", "CSS Animations"],
+      },
+      {
+        name: "Data Visualization",
+        description: "Transforming data into compelling, interactive stories.",
+        tools: ["Recharts", "Chart.js", "Streamlit", "Seaborn", "Three.js"],
+      },
+      {
+        name: "Performance & Testing",
+        description: "Optimizing for speed, reliability, and quality.",
+        tools: [
+          "Lighthouse",
+          "Jest",
+          "React Testing Library",
+          "Cypress",
+          "Chromatic",
+        ],
+      },
+      {
+        name: "Integrations",
+        description: "Connecting to APIs and real-time data sources.",
+        tools: [
+          "REST",
+          "GraphQL",
+          "Apollo",
+          "gRPC",
+          "Wagmi",
+          "WebSockets",
+          "Yjs",
+        ],
+      },
+    ],
+  },
+  {
+    category: "Backend Engineering",
+    description:
+      "Architecting robust, scalable, and secure server-side solutions.",
+    skills: [
+      {
+        name: "System Architecture & Design",
+        description: "Designing scalable, maintainable, and resilient systems.",
+        tools: [
+          "NestJS",
+          "Flask",
+          "Microservices",
+          "Event-Driven",
+          "CQRS",
+          "Design Patterns",
+        ],
+      },
+      {
+        name: "API Development",
+        description: "Building powerful, secure, and well-documented APIs.",
+        tools: ["REST", "GraphQL", "gRPC", "Webhooks", "OpenAPI/Swagger"],
+      },
+      {
+        name: "Data Management",
+        description:
+          "Efficiently handling and scaling data storage and processing.",
+        tools: [
+          "PostgreSQL",
+          "Redis",
+          "Kafka",
+          "BullMQ",
+          "MongoDB",
+          "TypeORM",
+          "Prisma",
+        ],
+      },
+      {
+        name: "DevOps & CI/CD",
+        description: "Automating deployment, scaling, and monitoring.",
+        tools: ["Docker", "GitHub Actions", "Nginx", "PM2"],
+      },
+      {
+        name: "Security & Performance",
+        description: "Ensuring reliability, safety, and observability.",
+        tools: [
+          "JWT",
+          "OAuth",
+          "Rate Limiting",
+          "Caching",
+          "Sentry",
+          "Helmet.js",
+          "Load Testing",
+        ],
+      },
+      {
+        name: "Laravel Ecosystem",
+        description:
+          "Mastery of the Laravel PHP framework and its powerful ecosystem.",
+        tools: [
+          "Laravel",
+          "Eloquent",
+          "Horizon",
+          "Nova",
+          "Sanctum",
+          "Passport",
+          "Sails",
+          "Telescope",
+          "Scout",
+        ],
+      },
+    ],
+  },
+  {
+    category: "Game Development",
+    description: "Creating interactive, cross-platform gaming experiences.",
+    skills: [
+      {
+        name: "Web Game Engines",
+        description:
+          "Building engaging browser-based and cross-platform games.",
+        tools: ["Phaser.js", "Three.js", "WebGL", "Canvas"],
+      },
+      {
+        name: "3D & Physics",
+        description:
+          "Implementing realistic mechanics and immersive environments.",
+        tools: ["Blender", "Arcade Physics", "Matter.js", "Three.js"],
+      },
+      {
+        name: "Platform Integration",
+        description: "Connecting games to social and real-time platforms.",
+        tools: ["Discord", "Facebook", "WebSocket", "REST APIs"],
+      },
+    ],
+  },
+  {
+    category: "Data Science & AI",
+    description: "Leveraging data and AI for intelligent, automated solutions.",
+    skills: [
+      {
+        name: "Data Analysis & Engineering",
+        description: "Extracting insights and building data pipelines.",
+        tools: ["Pandas", "NumPy", "Feature Engineering", "ETL", "SQL"],
+      },
+      {
+        name: "Machine Learning & AI",
+        description: "Building and deploying intelligent systems.",
+        tools: [
+          "Scikit-learn",
+          "TensorFlow",
+          "Prompt Engineering",
+          "OpenAI API",
+          "HuggingFace",
+        ],
+      },
+      {
+        name: "Visualization & Reporting",
+        description: "Presenting data clearly and interactively.",
+        tools: ["Matplotlib", "Seaborn", "Streamlit", "PowerBI (basics)"],
+      },
+      {
+        name: "Automation & Scripting",
+        description: "Streamlining workflows and scraping data.",
+        tools: ["Selenium", "BeautifulSoup", "Python Automation", "Bash"],
+      },
+    ],
+  },
+];
+---
+
+<section
+  id="skills"
+  class="relative w-full min-h-screen flex flex-col items-center justify-center px-4 py-20"
+>
+  <div class="max-w-7xl w-full mx-auto flex flex-col items-center text-center">
+    <h2
+      class="text-4xl md:text-6xl font-extrabold text-primary mb-2 tracking-tight"
+    >
+      Enchanted Expertise
+    </h2>
+    <p class="text-xl md:text-2xl font-semibold text-offwhite mb-12">
+      Core Competencies & Technical Mastery
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
+      {
+        skills.map((category) => (
+          <div class="bg-white/10 border border-white/20 rounded-2xl shadow-xl p-6 backdrop-blur-sm flex flex-col items-center text-center md:items-start md:text-left">
+            <h3 class="text-2xl font-bold text-primary mb-2">
+              {category.category}
+            </h3>
+            <p class="text-offwhite/80 mb-6">{category.description}</p>
+            <div class="space-y-4 w-full">
+              {category.skills.map((skill) => (
+                <div class="border-t border-white/10 pt-4">
+                  <h4 class="text-lg font-semibold text-offwhite mb-2">
+                    {skill.name}
+                  </h4>
+                  <p class="text-offwhite/70 text-sm mb-2">
+                    {skill.description}
+                  </p>
+                  <div class="flex flex-wrap gap-2">
+                    {skill.tools.map((tool) => (
+                      <span class="px-3 py-1 text-sm bg-primary text-secondary rounded-full shadow-md">
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

@@ -1,16 +1,33 @@
 ---
-
+import Hero from "../components/Hero.astro";
+import Past from "../components/Past.astro";
+import Skills from "../components/Skills.astro";
+import Horizon from "../components/Horizon.astro";
+import "../styles/global.css";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Ore Adeleye portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="bg-gradient-to-br from-[#4b2b63] to-[#1a1a1a] text-offwhite font-sans"
+  >
+    <div class="h-screen overflow-y-scroll">
+      <Hero />
+      <Past />
+      <Skills />
+      <Horizon />
+    </div>
+  </body>
 </html>
