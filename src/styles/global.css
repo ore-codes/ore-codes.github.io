@@ -8,12 +8,11 @@
   --color-secondary: #200834;
   --color-offwhite: #f8fafc;
 
-  --drop-shadow-vivid: 4px 4px #ff8c42;
+  --drop-shadow-vivid: 2px 2px var(--color-primary);
 }
 
 body {
   @apply relative overflow-hidden text-offwhite bg-gradient-to-br from-[#4b2b63] to-[#1a1a1a] min-h-screen font-sans;
-  font-optical-sizing: auto;
 }
 
 /* Grain overlay using a pseudo-element */
@@ -38,13 +37,14 @@ body::before {
 h1,
 h2,
 h3 {
-  @apply font-display;
+  @apply font-display tracking-wide;
+}
+
+h2 {
+  @apply opacity-60 animate-pulse;
+  filter: drop-shadow(.5px .5px #000);
 }
 
 .font-sans {
   @apply tracking-tight;
-}
-
-.font-display {
-  @apply tracking-wide;
 }

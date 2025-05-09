@@ -208,7 +208,7 @@ const skills = [
 >
   <div class="max-w-7xl w-full mx-auto flex flex-col items-center text-center">
     <h2
-      class="text-4xl md:text-6xl font-extrabold text-primary mb-2 tracking-tight"
+      class="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent"
     >
       Enchanted Expertise
     </h2>
@@ -216,10 +216,14 @@ const skills = [
       Core Competencies & Technical Mastery
     </p>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
+    <div class="skills-section grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
       {
-        skills.map((category) => (
-          <div class="bg-white/10 border border-white/20 rounded-2xl shadow-xl p-6 backdrop-blur-sm flex flex-col items-center text-center md:items-start md:text-left">
+        skills.map((category, idx) => (
+          <div
+            class="skill-card bg-white/10 border border-white/20 rounded-2xl shadow-xl p-6 backdrop-blur-sm flex flex-col items-center text-center md:items-start md:text-left"
+            data-index={idx}
+            data-side={idx % 2 === 0 ? "left" : "right"}
+          >
             <h3 class="text-2xl font-bold text-primary mb-2">
               {category.category}
             </h3>
@@ -233,9 +237,9 @@ const skills = [
                   <p class="text-offwhite/70 text-sm mb-2">
                     {skill.description}
                   </p>
-                  <div class="flex flex-wrap gap-2">
+                  <div class="tool-tag-container flex flex-wrap gap-2">
                     {skill.tools.map((tool) => (
-                      <span class="px-3 py-1 text-sm font-semibold bg-primary text-secondary rounded-full shadow-md">
+                      <span class="tool-tag px-3 py-1 text-sm font-semibold bg-primary text-secondary rounded-full shadow-md">
                         {tool}
                       </span>
                     ))}
@@ -249,3 +253,15 @@ const skills = [
     </div>
   </div>
 </section>
+
+<script src="../scripts/skills-animations.ts"></script>
+
+<style>
+  section {
+    background: radial-gradient(
+      circle at center,
+      rgba(76, 29, 149, 0.15) 0%,
+      rgba(17, 24, 39, 0.95) 100%
+    );
+  }
+</style>

@@ -59,9 +59,7 @@ const timeline = [
       My Tech Journey: From QBASIC to Full Stack
     </p>
 
-    <!-- Timeline Container -->
     <div class="relative w-full">
-      <!-- Timeline Line -->
       <div
         class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-primary/20"
       >
@@ -71,22 +69,18 @@ const timeline = [
       >
       </div>
 
-      <!-- Timeline Items -->
       <div class="space-y-12">
         {
           timeline.map((item, idx) => (
             <div
-              class={
-                `relative flex items-center ` +
-                `md:flex-row ` +
-                `flex-col md:items-center` // mobile: stack, desktop: row
-              }
+              class="timeline-item relative flex items-center md:flex-row flex-col md:items-center"
+              data-index={idx}
+              data-position={item.position}
             >
-              {/* Desktop: Alternating layout, Mobile: Centered */}
               {item.position === "left" ? (
-                <Fragment>
+                <>
                   <div class="hidden md:block w-1/2 pr-8 text-right">
-                    <div class="bg-white/10 border border-white/20 rounded-2xl shadow-xl p-6 backdrop-blur-sm">
+                    <div class="timeline-card bg-white/10 border border-white/20 rounded-2xl shadow-xl p-6 backdrop-blur-sm">
                       <h3 class="text-2xl font-bold text-primary mb-2">
                         {item.title}
                       </h3>
@@ -96,14 +90,12 @@ const timeline = [
                       </p>
                     </div>
                   </div>
-                  {/* Dot */}
-                  <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-primary" />
+                  <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-primary timeline-dot" />
                   <div class="hidden md:block w-1/2 pl-8" />
-                  {/* Mobile: Centered card with dot on left */}
                   <div class="md:hidden relative flex flex-row items-center w-full">
-                    <div class="absolute left-2.5 top-1/2 transform -translate-y-1/2 w-4 h-4 rounded-full bg-primary z-10" />
+                    <div class="absolute left-2.5 top-1/2 transform -translate-y-1/2 w-4 h-4 rounded-full bg-primary timeline-dot z-10" />
                     <div class="flex-1 ml-10">
-                      <div class="bg-white/10 border border-white/20 rounded-2xl shadow-xl p-6 backdrop-blur-sm">
+                      <div class="timeline-card bg-white/10 border border-white/20 rounded-2xl shadow-xl p-6 backdrop-blur-sm">
                         <h3 class="text-2xl font-bold text-primary mb-2">
                           {item.title}
                         </h3>
@@ -114,13 +106,13 @@ const timeline = [
                       </div>
                     </div>
                   </div>
-                </Fragment>
+                </>
               ) : (
-                <Fragment>
+                <>
                   <div class="hidden md:block w-1/2 pr-8" />
-                  <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-primary" />
+                  <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-primary timeline-dot" />
                   <div class="hidden md:block w-1/2 pl-8">
-                    <div class="bg-white/10 border border-white/20 rounded-2xl shadow-xl p-6 backdrop-blur-sm">
+                    <div class="timeline-card bg-white/10 border border-white/20 rounded-2xl shadow-xl p-6 backdrop-blur-sm">
                       <h3 class="text-2xl font-bold text-primary mb-2 text-left">
                         {item.title}
                       </h3>
@@ -132,11 +124,10 @@ const timeline = [
                       </p>
                     </div>
                   </div>
-                  {/* Mobile: Centered card with dot on left */}
                   <div class="md:hidden relative flex flex-row items-center w-full">
-                    <div class="absolute left-2.5 top-1/2 transform -translate-y-1/2 w-4 h-4 rounded-full bg-primary z-10" />
+                    <div class="absolute left-2.5 top-1/2 transform -translate-y-1/2 w-4 h-4 rounded-full bg-primary timeline-dot z-10" />
                     <div class="flex-1 ml-10">
-                      <div class="bg-white/10 border border-white/20 rounded-2xl shadow-xl p-6 backdrop-blur-sm">
+                      <div class="timeline-card bg-white/10 border border-white/20 rounded-2xl shadow-xl p-6 backdrop-blur-sm">
                         <h3 class="text-2xl font-bold text-primary mb-2">
                           {item.title}
                         </h3>
@@ -147,7 +138,7 @@ const timeline = [
                       </div>
                     </div>
                   </div>
-                </Fragment>
+                </>
               )}
             </div>
           ))
@@ -158,8 +149,45 @@ const timeline = [
     <a
       href="https://rxresu.me/ore-codes/ore-adeleye-resume"
       target="_blank"
-      class="mt-16 inline-block px-6 py-3 rounded-lg bg-primary text-secondary font-bold shadow-lg hover:bg-primary/80 transition"
-      >See Full Résumé</a
+      class="resume-btn mt-16 inline-block px-6 py-3 rounded-lg bg-primary text-secondary font-bold shadow-lg hover:bg-primary/80 transition"
     >
+      See Full Résumé
+    </a>
   </div>
 </section>
+
+<script src="../scripts/timeline-animations.ts"></script>
+
+<style>
+  .resume-btn {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .resume-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.4) 50%,
+      rgba(255, 255, 255, 0.1) 100%
+    );
+    transform: skewX(-20deg);
+    animation: shimmer 2.5s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  @keyframes shimmer {
+    0% {
+      left: -75%;
+    }
+    100% {
+      left: 125%;
+    }
+  }
+</style>
