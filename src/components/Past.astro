@@ -1,48 +1,41 @@
 ---
-const timeline = [
-  {
-    title: "The Beginning",
-    period: "2017",
-    description:
-      "Started with Java and JavaFX, building desktop applications and 2D games. Built on my secondary school QBASIC foundation, exploring the world of programming.",
-    position: "left",
-  },
-  {
-    title: "Web Discovery",
-    period: "2017",
-    description:
-      "Discovered HTML and web development, realizing the potential of creating visual experiences on the web. Started sharing code snippets and projects on Sololearn, embracing open-source collaboration.",
-    position: "right",
-  },
-  {
-    title: "Freelance Growth",
-    period: "2019 - 2021",
-    description:
-      "Mastered modern web technologies including React, Laravel, Vue, and Symfony. Built projects like Number to Words and Card Maker, learning through public code sharing and feedback.",
-    position: "left",
-  },
-  {
-    title: "Production Experience",
-    period: "2021 - 2023",
-    description:
-      "Joined Trivox, working on critical production components. Learned scalability, maintainability, and DevOps practices. Developed cross-platform solutions for a real-world marketplace.",
-    position: "right",
-  },
-  {
-    title: "Leadership & Agile",
-    period: "2023 - 2024",
-    description:
-      "Led engineering at Amazin Trips, embracing agile methodologies and KPIs. Developed leadership skills, team communication, and responsibility in a fast-paced startup environment.",
-    position: "left",
-  },
-  {
-    title: "Enterprise Scale",
-    period: "2024 - Present",
-    description:
-      "At SchoolTry, working on large-scale EdTech solutions. Building reliable, user-friendly applications with industry best practices and team collaboration.",
-    position: "right",
-  },
-];
+import { GraphQLClient } from "graphql-request";
+import { HYGRAPH_ENDPOINT } from "astro:env/server";
+
+type TimelineRes = {
+  timelineItems: TimelineItem[];
+};
+
+type TimelineItem = {
+  title: string;
+  startYear: number;
+  endYear: number;
+  description: string;
+};
+
+const client = new GraphQLClient(HYGRAPH_ENDPOINT);
+
+const { timelineItems }: TimelineRes = await client.request(`
+  query Timeline {
+    timelineItems (orderBy:startYear_ASC) {
+      title
+      startYear
+      endYear
+      description
+    }
+  }`);
+
+const timeline = timelineItems.map((item, idx) => {
+  let period = `${item.startYear}`;
+  if (item.endYear !== item.startYear) {
+    period += ` - ${item.endYear === 2025 ? "Present" : item.endYear}`;
+  }
+  return {
+    ...item,
+    period,
+    position: idx % 2 === 0 ? "left" : "right",
+  };
+});
 ---
 
 <section
@@ -77,7 +70,7 @@ const timeline = [
               data-index={idx}
               data-position={item.position}
             >
-              {item.position === "left" ? (
+              {idx % 2 === 0 ? (
                 <>
                   <div class="hidden md:block w-1/2 pr-8 text-right">
                     <div class="timeline-card bg-white/10 border border-white/20 rounded-2xl shadow-xl p-6 backdrop-blur-sm">

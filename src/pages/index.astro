@@ -5,25 +5,24 @@ import Skills from "../components/Skills.astro";
 import Horizon from "../components/Horizon.astro";
 import "../styles/global.css";
 import "../styles/animations.css";
+import { SITE_URL } from "astro:env/server";
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta
+      name="description"
+      content="Ore Adeleye's personal portfolio website showcasing skills, experience, and projects in frontend development, backend engineering, and machine learning."
+    />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta property="og:title" content="Ore Adeleye" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://ore-codes.github.io" />
-    <meta
-      property="og:image"
-      content="https://ore-codes.github.io/og-image.png"
-    />
-    <meta
-      property="twitter:image"
-      content="https://ore-codes.github.io/og-image.png"
-    />
+    <meta property="og:url" content={SITE_URL} />
+    <meta property="og:image" content={`${SITE_URL}/og-image.png`} />
+    <meta property="twitter:image" content={`${SITE_URL}/og-image.png`} />
     <meta property="og:site_name" content="Ore Adeleye" />
     <meta property="og:description" content="Ore Adeleye's personal website" />
     <title>Ore Adeleye portfolio</title>

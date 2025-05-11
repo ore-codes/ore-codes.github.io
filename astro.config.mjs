@@ -17,6 +17,7 @@ export default defineConfig({
   env: {
     schema: {
       HYGRAPH_ENDPOINT: envField.string({ context: "server", access: "public" }),
+      SITE_URL: envField.string({ context: "server", access: "public", default: "https://ore-codes.github.io" }),
     }
   }
 });
