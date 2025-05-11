@@ -1,0 +1,50 @@
+/* Initial states for animated elements */
+.skill-card {
+  opacity: 0;
+  transform: translateX(0) scale(0.6);
+  filter: blur(10px);
+}
+
+.tool-tag {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.project-card {
+  opacity: 0;
+  transform: translate3d(0, 80px, -200px) rotateX(10deg);
+  filter: blur(20px);
+}
+
+.timeline-card {
+  opacity: 0;
+  transform: translateX(0) rotate(0deg) scale(0.9);
+  filter: blur(10px);
+}
+
+.timeline-dot {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.hero-title span {
+  opacity: 0;
+  transform: translateY(120px) rotate(-15deg) scale(0.6);
+}
+
+.hero-subtitle {
+  opacity: 0;
+  filter: blur(4px);
+}
+
+.nav-box {
+  opacity: 0;
+  transform: scale(0);
+  filter: blur(10px);
+}
+
+.nav-box .button {
+  opacity: 0;
+  transform: translateY(40px) scale(0.3);
+  filter: blur(4px);
+}
