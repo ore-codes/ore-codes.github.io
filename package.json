@@ -13,6 +13,7 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.1.5",
     "astro": "^5.7.11",
+    "graphql-request": "^7.1.2",
     "motion": "^12.10.5",
     "tailwindcss": "^4.1.5"
   },
