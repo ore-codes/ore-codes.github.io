@@ -1,4 +1,4 @@
-import { animate, stagger } from "motion";
+import { animate } from "motion";
 
 (function animateSkillsSection() {
   const cards = document.querySelectorAll(".skill-card");
@@ -11,26 +11,32 @@ import { animate, stagger } from "motion";
           const index = Number(card.dataset.index);
           const side = card.dataset.side === "left" ? -100 : 100;
 
-          // Animate card
+          card.style.willChange = "transform, opacity, filter";
+
           animate(
             card,
             {
               opacity: [0, 1],
               transform: [
-                `translateX(${side}px) scale(0.6) rotate(${side > 0 ? 2 : -2}deg)`,
-                "translateX(0) scale(1.1) rotate(0)",
+                `translate3d(${side}px, 0, 0) scale(0.6) rotate(${side > 0 ? 2 : -2}deg)`,
+                "translate3d(0, 0, 0) scale(1.1) rotate(0deg)",
                 "scale(1)",
               ],
-              filter: ["blur(10px)", "blur(0px) drop-shadow(0 0 12px rgba(255,255,255,0.2))"],
+              filter: [
+                "blur(10px)",
+                "blur(0px) drop-shadow(0 0 12px rgba(255,255,255,0.2))",
+              ],
             },
             {
               duration: 1.4,
               easing: "cubic-bezier(0.26, 0.86, 0.44, 1.05)",
               delay: index * 0.2,
+              onFinish: () => {
+                card.style.willChange = "auto";
+              },
             }
           );
 
-          // Tool burst
           const tags = card.querySelectorAll(".tool-tag");
           tags.forEach((tag, i) => {
             const angle = (360 / tags.length) * i;
@@ -38,13 +44,16 @@ import { animate, stagger } from "motion";
             const x = Math.cos(rad) * 50;
             const y = Math.sin(rad) * 50;
 
+            const tagEl = tag as HTMLElement;
+            tagEl.style.willChange = "transform, opacity";
+
             animate(
-              tag,
+              tagEl,
               {
                 opacity: [0, 1],
                 transform: [
-                  `translate(${x}px, ${y}px) scale(0)`,
-                  "translate(0px, 0px) scale(1.1)",
+                  `translate3d(${x}px, ${y}px, 0) scale(0)`,
+                  "translate3d(0px, 0px, 0) scale(1.1)",
                   "scale(1)",
                 ],
               },
@@ -52,6 +61,9 @@ import { animate, stagger } from "motion";
                 duration: 0.6,
                 delay: 1.1 + i * 0.04,
                 easing: "ease-out-back",
+                onFinish: () => {
+                  tagEl.style.willChange = "auto";
+                },
               }
             );
           });

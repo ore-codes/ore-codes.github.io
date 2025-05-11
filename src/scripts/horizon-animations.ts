@@ -1,4 +1,3 @@
-// horizon-animations.ts
 import { animate } from "motion";
 
 export function animateHorizonSection() {

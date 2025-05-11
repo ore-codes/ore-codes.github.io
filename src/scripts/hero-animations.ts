@@ -1,12 +1,10 @@
-import { animate, stagger } from "motion";
-
-// Utility to get random float
-const rand = (min: number, max: number) => Math.random() * (max - min) + min;
+import { animate } from "motion";
 
 (async function animateHero(): Promise<void> {
   const letters = document.querySelectorAll(".hero-title span");
 
   letters.forEach((el, i) => {
+    (el as HTMLElement).style.willChange = "transform, opacity";
     animate(
       el,
       {
@@ -28,12 +26,17 @@ const rand = (min: number, max: number) => Math.random() * (max - min) + min;
     canvas.className = "burst";
     canvas.width = 100;
     canvas.height = 100;
-    canvas.style.position = "absolute";
+    canvas.style.position = "fixed";
     canvas.style.pointerEvents = "none";
+    canvas.style.zIndex = "9999";
 
     const rect = targetEl.getBoundingClientRect();
-    canvas.style.left = `${rect.left + rect.width / 2 - 50}px`;
-    canvas.style.top = `${rect.top + rect.height / 2 - 50}px`;
+    const x = rect.left + rect.width / 2 - 50;
+    const y = rect.top + rect.height / 2 - 50;
+    canvas.style.left = "0";
+    canvas.style.top = "0";
+    canvas.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+
     document.body.appendChild(canvas);
 
     const ctx = canvas.getContext("2d");
@@ -65,48 +68,38 @@ const rand = (min: number, max: number) => Math.random() * (max - min) + min;
     draw();
   }
 
-  // const spans = document.querySelectorAll(".hero-title span");
-  // spans.forEach((el, i) => {
-  //   animate(
-  //     el,
-  //     {
-  //       x: [rand(-200, 200), 0],
-  //       y: [rand(-150, 150), 0],
-  //       rotate: [rand(-180, 180), 0],
-  //       opacity: [0, 1],
-  //       scale: [0.4, 1.2, 1],
-  //       filter: ["blur(6px)", "blur(0px)"],
-  //     },
-  //     {
-  //       delay: 0.3 + i * 0.05,
-  //       duration: 2,
-  //       easing: "cubic-bezier(0.19, 1, 0.22, 1)", // snappy bounce
-  //     }
-  //   );
-  // });
-
   // SUBTITLE: glitch flicker in
+  const subtitle = document.querySelector(".hero-subtitle") as HTMLElement;
+  subtitle.style.willChange = "transform, opacity, filter";
+
   animate(
-    ".hero-subtitle",
-    { opacity: [0, 1], filter: ["blur(4px)", "blur(0px)"] },
+    subtitle,
+    {
+      opacity: [0, 1],
+      transform: ["scale(1.02)", "scale(1)"],
+      filter: ["blur(4px)", "blur(0px)"],
+    },
     {
       delay: 1.3,
       duration: 0.3,
       easing: "ease-in-out",
     }
   );
+
   setTimeout(() => {
-    // flicker/glitch effect
     for (let i = 0; i < 3; i++) {
       setTimeout(() => {
-        animate(".hero-subtitle", { opacity: [1, 0.4, 1] }, { duration: 0.1 });
+        animate(subtitle, { opacity: [1, 0.4, 1] }, { duration: 0.1 });
       }, 200 * i);
     }
   }, 1.6 * 1000);
 
   // NAV BOX: portal-style pop-in
+  const navBox = document.querySelector(".nav-box") as HTMLElement;
+  navBox.style.willChange = "transform, opacity, filter";
+
   animate(
-    ".nav-box",
+    navBox,
     {
       scale: [0, 1.3, 1],
       opacity: [0, 1],
@@ -122,6 +115,8 @@ const rand = (min: number, max: number) => Math.random() * (max - min) + min;
   // BUTTONS: warp-in with hover pulse
   const buttons = document.querySelectorAll(".nav-box .button");
   buttons.forEach((btn, i) => {
+    (btn as HTMLElement).style.willChange = "transform, opacity, filter";
+
     animate(
       btn,
       {
@@ -137,16 +132,22 @@ const rand = (min: number, max: number) => Math.random() * (max - min) + min;
       }
     );
 
-    // hover pulse
     btn.addEventListener("mouseenter", () => {
       animate(btn, { scale: [1, 1.1, 1] }, { duration: 0.4, easing: "ease-in-out" });
     });
   });
 
   // BACKGROUND: hue shift pulse
+  const radial = document.querySelector(".radial-bg") as HTMLElement;
+  radial.style.willChange = "transform, filter";
+
   animate(
-    ".radial-bg",
-    { scale: [1, 1.06, 1], rotate: [0, 2, 0], filter: ["hue-rotate(0deg)", "hue-rotate(30deg)", "hue-rotate(0deg)"] },
+    radial,
+    {
+      scale: [1, 1.06, 1],
+      rotate: [0, 2, 0],
+      filter: ["hue-rotate(0deg)", "hue-rotate(30deg)", "hue-rotate(0deg)"],
+    },
     {
       duration: 5,
       repeat: Infinity,
