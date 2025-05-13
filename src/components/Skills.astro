@@ -2,6 +2,9 @@
 import { GraphQLClient } from "graphql-request";
 import { HYGRAPH_ENDPOINT } from "astro:env/server";
 
+export const prerender = true;
+export const revalidate = 43200; // 12 hours in seconds
+
 type SkillsRes = {
   skillCategories: Category[];
 };

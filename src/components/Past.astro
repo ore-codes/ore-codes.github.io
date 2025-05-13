@@ -2,6 +2,9 @@
 import { GraphQLClient } from "graphql-request";
 import { HYGRAPH_ENDPOINT } from "astro:env/server";
 
+export const prerender = true;
+export const revalidate = 43200; // 12 hours in seconds
+
 type TimelineRes = {
   timelineItems: TimelineItem[];
 };
@@ -49,7 +52,7 @@ const timeline = timelineItems.map((item, idx) => {
       Origins & Odyssey
     </h2>
     <p class="text-xl md:text-2xl font-semibold text-offwhite mb-12">
-      My Tech Journey: From QBASIC to Full Stack
+      Code, Scale, Lead: A Full-Stack Engineer’s Evolution
     </p>
 
     <div class="relative w-full">
